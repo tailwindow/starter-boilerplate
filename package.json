@@ -1,0 +1,25 @@
+{
+  "name": "starter-boilerplate",
+  "version": "0.1.0",
+  "description": "Tailwind CSS Starter Boilerplate",
+  "repository": "https://github.com/tailwindow/starter-boilerplate",
+  "author": "Tailwindow",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "serve": "cross-env NODE_ENV=development concurrently \"postcss assets/css/tailwind.css -o build/tailwind.css --watch\"  \"live-server\"",
+    "dev": "cross-env NODE_ENV=development postcss assets/css/tailwind.css -o build/tailwind.css",
+    "build": "cross-env NODE_ENV=production postcss assets/css/tailwind.css -o build/tailwind.css",
+    "start": "npm run serve"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.8.4",
+    "tailwindcss": "^1.4.6"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "cross-env": "^7.0.2",
+    "live-server": "^1.2.1",
+    "postcss-cli": "^7.1.1"
+  }
+}
